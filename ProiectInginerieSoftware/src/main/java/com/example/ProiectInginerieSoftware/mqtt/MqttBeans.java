@@ -61,9 +61,9 @@ public class MqttBeans {
                 System.out.println(message.getPayload() + " written to topic: " + topic );
 
                 /*
-                if(topic == Ambulance)
+                if(topic.equals("ambulance"))
 
-                if(topic.equals("trafficLight")
+                if(topic.equals("trafficLight"))
                  */
             }
         };
