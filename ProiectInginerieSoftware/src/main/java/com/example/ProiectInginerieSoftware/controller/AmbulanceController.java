@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequestMapping("api/ambulance")
 public class AmbulanceController {
 
-
+    @Autowired
     private AmbulanceService ambulanceService;
 
     @PostMapping("/add")

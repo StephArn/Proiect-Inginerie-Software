@@ -22,4 +22,14 @@ public class Ambulance {
 
     @Field
     int posx, posy;
+
+    @Field
+    double mfcc1, mfcc2, mfcc3;
+
+    public Ambulance(String licensePlate, boolean sensorStatus, int posx, int posy) {
+        this.licensePlate = licensePlate;
+        this.sensorStatus = sensorStatus;
+        this.posx = posx;
+        this.posy = posy;
+    }
 }

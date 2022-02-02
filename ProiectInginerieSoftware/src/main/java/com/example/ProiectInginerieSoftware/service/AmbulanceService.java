@@ -6,4 +6,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface AmbulanceService {
     Ambulance saveAmbulance(int id, Ambulance ambulance);
+    Boolean detectAmbulance(Ambulance ambulance);
 }

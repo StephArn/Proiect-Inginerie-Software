@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProiectInginerieSoftware/ProiectInginerieSoftware.iml" filepath="$PROJECT_DIR$/ProiectInginerieSoftware/ProiectInginerieSoftware.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProiectInginerieSoftware/SmartSensor.iml" filepath="$PROJECT_DIR$/ProiectInginerieSoftware/SmartSensor.iml" />
     </modules>
   </component>
 </project>
