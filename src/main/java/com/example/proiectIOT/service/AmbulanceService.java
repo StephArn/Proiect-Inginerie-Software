@@ -3,9 +3,16 @@ package com.example.proiectIOT.service;
 import com.example.proiectIOT.model.Ambulance;
 import com.example.proiectIOT.repository.AmbulanceRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
 
 @AllArgsConstructor
 @Service
@@ -14,7 +21,8 @@ public class AmbulanceService {
 
     private final AmbulanceRepository ambulanceRepository;
 
-    public Boolean detectAmbulance(Ambulance amb1)
+
+    public static Boolean detectAmbulance(Ambulance amb1)
     {
         double mfcc1 = amb1.getMfcc1();
         double mfcc2 = amb1.getMfcc2();
@@ -30,6 +38,7 @@ public class AmbulanceService {
     public List<Ambulance> getAllAmbulances() {
         return ambulanceRepository.findAll();
     }
+
     public void insertAmbulance(Ambulance ambulance) {
         System.out.println("Inserting ambulance " + ambulance);
         ambulanceRepository.insert(ambulance);
