@@ -1,0 +1,59 @@
+asyncapi: 2.3.0
+info:
+  title: Proiect IoT
+  version: 1.0.0
+  description: >
+    Am conceput o aplicație cu scopul de a elibera drumul pentru ambulanțele
+    aflate în misiune. În simulare avem detectoare sonore în toate intersecțiile
+    dintr-un oraș. Aceste detectoare, împreună cu toate ambulanțele din unicul
+    spital din oraș sunt conectate la aplicație. Modul de funcționare este
+    simplu: când una din ambulanțe răspunde la o urgență, trimite un semnal care
+    indică locul unde merge. Aplicația îi va calcula automat o rută. De-a lungul
+    rutei, la fiecare intersecție, senzorii de la semafoare for fi atenționați
+    să asculte. Dacă interceptează sunete echivalente unei sirene (bazată pe
+    trei indici), înseamnă că ambulanța se apropie și atunci toate semafoarele
+    din intersecție se vor face roșii. Cât timp sirena încă se aude, semafoarele
+    vor rămâne roșii, ținând șoferii pe loc pentru a crea un drum liber
+    ambulanței.
+servers:
+  production:
+    url: localhost
+    protocol: mqtt
+    description: Mosquitto
+defaultContentType: application/json
+channels:
+  sendMessage:
+    publish:
+      message:
+        $ref: '#/components/messages/sendMessage'
+components:
+  messages:
+    sendMessage:
+      name: sendMessage
+      title: sendMessage
+      summary: >-
+        Senzorul central care stabileste mesajul audio al ambulantelor si
+        managementul semafoarelor.
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/sendMessagePayload'
+  schemas:
+    sendMessagePayload:
+      type: object
+      properties:
+        Topic:
+          $ref: '#/components/schemas/TopicPayload'
+        Message:
+          $ref: '#/components/schemas/MessagePayload'
+    TopicPayload:
+      type: string
+      format: String
+      description: Topic-ul folosit
+      example: ambulance
+    MessagePayload:
+      type: string
+      format: String
+      description: Mesajul trimis care va fi procesat
+      example: >-
+        {licensePlate: SV21ANA, sensorStatus: true, mfcc1: 0.12, mfcc2: -180.65,
+        mfcc3: 93.216721}
