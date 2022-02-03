@@ -23,24 +23,24 @@ public class AmbulanceController {
     }
 
     @PostMapping
-    public ResponseEntity addExpense(@RequestBody Ambulance ambulance) {
+    public ResponseEntity addAmbulance(@RequestBody Ambulance ambulance) {
         ambulanceService.insertAmbulance(ambulance);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping
-    public ResponseEntity updateExpense(@RequestBody Ambulance ambulance) {
+    public ResponseEntity updateAmbulance(@RequestBody Ambulance ambulance) {
         ambulanceService.updateAmbulance(ambulance);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @GetMapping("/{plate}")
-    public ResponseEntity getExpenseByName(@PathVariable String plate) {
+    public ResponseEntity getAmbulanceByLicensePlate(@PathVariable String plate) {
         return ResponseEntity.ok(ambulanceService.getAmbulance(plate));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteExpense(@PathVariable String id) {
+    public ResponseEntity deleteAmbulance(@PathVariable String id) {
         ambulanceService.deleteAmbulance(id);
         return ResponseEntity.noContent().build();
     }
