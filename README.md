@@ -8,6 +8,6 @@ Proiect anul 3, sem. 1
 
 - Documentație de utilizare:
   Am decis să folosim Spring. 
-  https://www.youtube.com/playlist?list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
-  https://www.youtube.com/watch?v=HHKrKwI--Yw
-  https://www.youtube.com/watch?v=th3uIP7D8nk
+  https://www.youtube.com/playlist?list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x <br>
+  https://www.youtube.com/watch?v=HHKrKwI--Yw <br>
+  https://www.youtube.com/watch?v=th3uIP7D8nk <br>
