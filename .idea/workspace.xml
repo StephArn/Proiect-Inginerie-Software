@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aa0d2bd-d212-4878-a0e9-b89ebad32bdb" name="Default Changelist" comment="finished REST">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/model/TrafficLightSystemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/service/AmbulanceServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+    <list default="true" id="2aa0d2bd-d212-4878-a0e9-b89ebad32bdb" name="Default Changelist" comment="added some unit tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/controller/AmbulanceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/model/AmbulanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/repository/AmbulanceRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/service/TrafficLightSystemServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/controller/AmbulanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/controller/AmbulanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/controller/EmergencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/controller/EmergencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/model/TrafficLightSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/model/TrafficLightSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/repository/AmbulanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/repository/AmbulanceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/service/AmbulanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proiectIOT/service/AmbulanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/model/TrafficLightSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/model/TrafficLightSystemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/service/AmbulanceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/proiectIOT/service/AmbulanceServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proiectIOT/controller/AmbulanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proiectIOT/controller/AmbulanceController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proiectIOT/service/AmbulanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proiectIOT/service/AmbulanceService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,17 +57,22 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.proiectIOT.repository" />
+      <recent name="com.example.proiectIOT.controller" />
       <recent name="com.example.proiectIOT.service" />
       <recent name="com.example.proiectIOT.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AmbulanceServiceTest.detectAmbulanceForBadIndices">
+  <component name="RunManager" selected="Diffblue Cover.Write tests for class TrafficLightSystemController">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -72,41 +86,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AmbulanceServiceTest.detectAmbulanceForBadIndices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proiectIOT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.proiectIOT.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.proiectIOT.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.proiectIOT.service.AmbulanceServiceTest" />
-      <option name="METHOD_NAME" value="detectAmbulanceForBadIndices" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AmbulanceServiceTest.getAllAmbulances" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proiectIOT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.proiectIOT.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.proiectIOT.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.proiectIOT.service.AmbulanceServiceTest" />
-      <option name="METHOD_NAME" value="getAllAmbulances" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProiectIotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="proiectIOT" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proiectIOT.ProiectIotApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for class Ambulance" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="proiectIOT" />
+      <settings run-config-name="Write tests for class Ambulance" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.example.proiectIOT.model.Ambulance" />
+      </settings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for class EmergencyController" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="proiectIOT" />
+      <settings run-config-name="Write tests for class EmergencyController" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.example.proiectIOT.controller.EmergencyController" />
+      </settings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for class TrafficLightSystem" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="proiectIOT" />
+      <settings run-config-name="Write tests for class TrafficLightSystem" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.example.proiectIOT.model.TrafficLightSystem" />
+      </settings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for class TrafficLightSystemController" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="proiectIOT" />
+      <settings run-config-name="Write tests for class TrafficLightSystemController" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.example.proiectIOT.controller.TrafficLightSystemController" />
+      </settings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for class TrafficLightSystemRepository" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="proiectIOT" />
+      <settings run-config-name="Write tests for class TrafficLightSystemRepository" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.example.proiectIOT.repository.TrafficLightSystemRepository" />
+      </settings>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,8 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AmbulanceServiceTest.detectAmbulanceForBadIndices" />
-        <item itemvalue="JUnit.AmbulanceServiceTest.getAllAmbulances" />
+        <item itemvalue="Diffblue Cover.Write tests for class TrafficLightSystemController" />
+        <item itemvalue="Diffblue Cover.Write tests for class EmergencyController" />
+        <item itemvalue="Diffblue Cover.Write tests for class TrafficLightSystemRepository" />
+        <item itemvalue="Diffblue Cover.Write tests for class TrafficLightSystem" />
+        <item itemvalue="Diffblue Cover.Write tests for class Ambulance" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +175,9 @@
       <option name="presentableId" value="Default" />
       <updated>1643810293246</updated>
       <workItem from="1643810294442" duration="14443000" />
-      <workItem from="1643833347129" duration="23156000" />
+      <workItem from="1643833347129" duration="23357000" />
+      <workItem from="1643867547192" duration="7762000" />
+      <workItem from="1643875545079" duration="862000" />
     </task>
     <task id="LOCAL-00001" summary="finished REST">
       <created>1643847838143</created>
@@ -144,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643847838144</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added some unit tests">
+      <created>1643858114696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643858114723</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,9 +209,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished REST" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished REST" />
+    <MESSAGE value="added some unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some unit tests" />
   </component>
 </project>

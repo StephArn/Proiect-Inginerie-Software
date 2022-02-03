@@ -9,5 +9,4 @@ public interface AmbulanceRepository
         extends MongoRepository<Ambulance, String> {
     Optional<Ambulance> findAmbulanceByLicensePlate(String plate);
 
-
 }

@@ -3,6 +3,7 @@ package com.example.proiectIOT.service;
 import com.example.proiectIOT.model.Ambulance;
 import com.example.proiectIOT.repository.AmbulanceRepository;
 import lombok.AllArgsConstructor;
+import org.apache.catalina.util.ErrorPageSupport;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +20,7 @@ import java.util.function.Function;
 public class AmbulanceService {
 
 
+    private static AmbulanceRepository ambulanceRepository1;
     private final AmbulanceRepository ambulanceRepository;
 
 
@@ -50,6 +52,11 @@ public class AmbulanceService {
         savedAmbulance.setMfcc1(ambulance.getMfcc1());
         savedAmbulance.setMfcc2(ambulance.getMfcc2());
         savedAmbulance.setMfcc3(ambulance.getMfcc3());
+    }
+
+    public void updateCity(Ambulance ambulance){
+        Ambulance savedAmbulance = ambulanceRepository.findById(ambulance.getId()).orElseThrow(() -> new RuntimeException(String.format("Cannot Find Ambulance by ID %s", ambulance.getId())));
+
     }
 
     public Object getAmbulance(String plate) {

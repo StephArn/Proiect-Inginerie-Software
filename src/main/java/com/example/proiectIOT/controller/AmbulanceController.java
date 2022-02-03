@@ -28,6 +28,11 @@ public class AmbulanceController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
+    @PostMapping("/process")
+    public void mqttAmbulance(@RequestBody int mode, @RequestBody Ambulance ambulance){
+        ambulanceService.updateCity(ambulance);
+    }
+
     @PutMapping
     public ResponseEntity updateAmbulance(@RequestBody Ambulance ambulance) {
         ambulanceService.updateAmbulance(ambulance);
